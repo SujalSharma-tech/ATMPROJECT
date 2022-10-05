@@ -1,4 +1,3 @@
-from sre_parse import WHITESPACE
 import time
 
 
