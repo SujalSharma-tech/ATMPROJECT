@@ -1,5 +1,5 @@
 # ATMPROJECT
-A small ATM machine project made in python....
+A simple ATM machine project made in python....
 
 made using loops, conditional statements, some colors and printing statements.
 
