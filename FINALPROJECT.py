@@ -53,7 +53,7 @@ if CardNo == Card:
                     if Act == 1:
                         Withdraw = (
                             input("Enter Amount of Money you want to Withdraw or press N to see all options: "))
-                        if Withdraw == "N" or Withdraw == "n":
+                        if Withdraw.isalpha() == True:
 
                             break
                         Withdraw = int(Withdraw)
@@ -83,7 +83,7 @@ if CardNo == Card:
 
                         Deposit = (
                             input("Enter amount of money you want to deposit or Press N for all options: "))
-                        if Deposit == "N" or Deposit == "n":
+                        if Deposit.isalpha() == True:
 
                             break
                         Deposit = int(Deposit)
