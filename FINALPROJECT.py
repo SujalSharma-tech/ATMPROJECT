@@ -76,6 +76,8 @@ if CardNo == Card:
                             print(GREEN, "Withdrawal Succesfull\n", WHITE)
                             Balance -= Withdraw
                             print("Remaining Balance: {}\n".format(Balance))
+                            if Balance < 5000:
+                                print(RED, "Balance is Low !", WHITE)
                             print(
                                 '========================================================\n')
 
@@ -105,6 +107,8 @@ if CardNo == Card:
                         print(
                             '========================================================\n')
                         print("Your Current Balance is: {}\n".format(Balance))
+                        if Balance < 5000:
+                            print(RED, "Balance is Low !", WHITE)
                         print(
                             '========================================================\n')
                         break
