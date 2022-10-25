@@ -116,7 +116,14 @@ if CardNo == Card:
                     elif Act == 4:
                         print(
                             '========================================================\n')
-                        PIN = input("Enter a four digit pin: ")
+                        newPIN = input("Enter a four digit pin: ")
+                        with open('FINALPROJECT.py', 'r') as file:
+                            lines = file.readlines()
+                            lines[13] = "PIN = " + str(newPIN) + "\n"
+
+                        with open('FINALPROJECT.py', 'w') as file:
+                            for i in lines:
+                                file.write(str(i))
                         print()
                         print(GREEN, "Pin changed succesfully\n", WHITE)
                         print(
