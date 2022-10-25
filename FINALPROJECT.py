@@ -117,18 +117,29 @@ if CardNo == Card:
                         print(
                             '========================================================\n')
                         newPIN = input("Enter a four digit pin: ")
-                        with open('FINALPROJECT.py', 'r') as file:
-                            lines = file.readlines()
-                            lines[13] = "PIN = " + str(newPIN) + "\n"
+                        if len(str(newPIN)) == 4:
 
-                        with open('FINALPROJECT.py', 'w') as file:
-                            for i in lines:
-                                file.write(str(i))
+                            with open('FINALPROJECT.py', 'r') as file:
+                                lines = file.readlines()
+                                lines[13] = "PIN = " + str(newPIN) + "\n"
+
+                            with open('FINALPROJECT.py', 'w') as file:
+                                for i in lines:
+                                    file.write(str(i))
+                        else:
+                            print(RED, "Please enter 4 digit valid PIN !", WHITE)
+                            continue
                         print()
                         print(GREEN, "Pin changed succesfully\n", WHITE)
                         print(
                             '========================================================\n')
-                        break
+                        # break
+                        print(
+                            '========================================================\n')
+                        print("Thank you for using Z-Axis ATM..Have a Good Day :)\n")
+                        print(
+                            '========================================================\n')
+                        exit()
 
                 else:
                     print("Thank you for using Z-Axis Bank")
