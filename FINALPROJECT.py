@@ -21,8 +21,28 @@ if CardNo == Card:
     print('========================================================')
     while Chances > 0:
 
-        PININ = int(input("             Enter your Card Pin: "))
-        if PININ == PIN:
+        PININ = input("   Enter your Card Pin or press r to reset Pin: ")
+        print('========================================================')
+        if PININ.isalpha() == True:
+            newPIN = input("            Enter a four digit pin: ")
+            if len(str(newPIN)) == 4:
+
+                with open('FINALPROJECT.py', 'r') as file:
+                    lines = file.readlines()
+                    lines[13] = "PIN = " + str(newPIN) + "\n"
+
+                with open('FINALPROJECT.py', 'w') as file:
+                    for i in lines:
+                        file.write(str(i))
+            else:
+                print(RED, "          Please enter 4 digit valid PIN !", WHITE)
+                continue
+            print()
+            print(GREEN, "             Pin changed succesfully\n", WHITE)
+            print(
+                '========================================================\n')
+            break
+        if int(PININ) == PIN:
             button = 0
             while button == 0:
 
