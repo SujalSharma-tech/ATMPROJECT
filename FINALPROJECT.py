@@ -11,7 +11,7 @@ t = 3
 print("                Welcome to Z-Axis Bank                  ")
 print('========================================================')
 Card = 123456789
-PIN = 8880
+PIN = 1234
 Chances = 4
 Balance = 15000
 CardNo = int(input("                Swipe your Card: "))
