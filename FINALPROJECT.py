@@ -1,17 +1,17 @@
 import time
 
+import os
+filename = os.path.basename(__file__)
+
 
 RED = '\033[31m'
 WHITE = '\033[m'
-
 GREEN = '\033[32m'
-
-
 t = 3
 print("                Welcome to Z-Axis Bank                  ")
 print('========================================================')
 Card = 123456789
-PIN = 1234
+PIN = 8880
 Chances = 4
 Balance = 15000
 CardNo = int(input("                Swipe your Card: "))
@@ -27,11 +27,11 @@ if CardNo == Card:
             newPIN = input("            Enter a four digit pin: ")
             if len(str(newPIN)) == 4:
 
-                with open('FINALPROJECT.py', 'r') as file:
+                with open(filename, 'r') as file:
                     lines = file.readlines()
                     lines[13] = "PIN = " + str(newPIN) + "\n"
 
-                with open('FINALPROJECT.py', 'w') as file:
+                with open(filename, 'w') as file:
                     for i in lines:
                         file.write(str(i))
             else:
@@ -139,11 +139,11 @@ if CardNo == Card:
                         newPIN = input("Enter a four digit pin: ")
                         if len(str(newPIN)) == 4:
 
-                            with open('FINALPROJECT.py', 'r') as file:
+                            with open(filename, 'r') as file:
                                 lines = file.readlines()
                                 lines[13] = "PIN = " + str(newPIN) + "\n"
 
-                            with open('FINALPROJECT.py', 'w') as file:
+                            with open(filename, 'w') as file:
                                 for i in lines:
                                     file.write(str(i))
                         else:
